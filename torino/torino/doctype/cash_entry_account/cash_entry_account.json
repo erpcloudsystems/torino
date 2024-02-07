@@ -1,0 +1,159 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2024-01-08 17:11:03.334630",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "account",
+  "col_break1",
+  "party_type",
+  "party",
+  "accounting_dimensions_section",
+  "cost_center",
+  "dimension_col_break",
+  "project",
+  "column_break_13",
+  "branch",
+  "sec_break1",
+  "amount",
+  "reference",
+  "user_remark",
+  "column_break_15",
+  "vehicle"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "columns": 2,
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Account",
+   "oldfieldname": "account",
+   "oldfieldtype": "Link",
+   "options": "Account",
+   "print_width": "250px",
+   "reqd": 1,
+   "search_index": 1,
+   "width": "250px"
+  },
+  {
+   "fieldname": "col_break1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "party_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Party Type",
+   "options": "DocType",
+   "search_index": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "party",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Party",
+   "options": "party_type"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "accounting_dimensions_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Dimensions"
+  },
+  {
+   "columns": 1,
+   "default": ":Company",
+   "description": "If Income or Expense",
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cost Center",
+   "oldfieldname": "cost_center",
+   "oldfieldtype": "Link",
+   "options": "Cost Center",
+   "print_hide": 1,
+   "print_width": "180px",
+   "width": "180px"
+  },
+  {
+   "fieldname": "dimension_col_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "sec_break1",
+   "fieldtype": "Section Break",
+   "label": "Amount"
+  },
+  {
+   "columns": 2,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "options": "account_currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "columns": 2,
+   "fieldname": "user_remark",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "User Remark",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-08 17:11:03.334630",
+ "modified_by": "Administrator",
+ "module": "Torino",
+ "name": "Cash Entry Account",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -4,6 +4,26 @@ app_publisher = "ECS"
 app_description = "customization"
 app_email = "info@erpcloud.systems"
 app_license = "mit"
+
+
+doc_events = {
+		"Payment Entry": {
+		"before_insert": "torino.doctype_triggers.accounting.payment_entry.payment_entry.before_insert",
+		"after_insert": "torino.doctype_triggers.accounting.payment_entry.payment_entry.after_insert",
+		"onload": "torino.doctype_triggers.accounting.payment_entry.payment_entry.onload",
+		"before_validate": "torino.doctype_triggers.accounting.payment_entry.payment_entry.before_validate",
+		"validate": "torino.doctype_triggers.accounting.payment_entry.payment_entry.validate",
+		"on_submit": "torino.doctype_triggers.accounting.payment_entry.payment_entry.on_submit",
+		"on_cancel": "torino.doctype_triggers.accounting.payment_entry.payment_entry.on_cancel",
+		"on_update_after_submit": "torino.doctype_triggers.accounting.payment_entry.payment_entry.on_update_after_submit",
+		"before_save": "torino.doctype_triggers.accounting.payment_entry.payment_entry.before_save",
+		"before_cancel": "torino.doctype_triggers.accounting.payment_entry.payment_entry.before_cancel",
+		"on_update": "torino.doctype_triggers.accounting.payment_entry.payment_entry.on_update",
+	}}
+
+doctype_js = {
+	"Payment Entry" : "doctype_triggers/accounting/payment_entry/payment_entry.js"
+}
 # required_apps = []
 
 # Includes in <head>
