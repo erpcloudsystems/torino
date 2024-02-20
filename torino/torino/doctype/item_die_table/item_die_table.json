@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-19 16:34:55.145201",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "line_no",
+  "workstation_type",
+  "time_to_fill_10kg_min",
+  "production_qty_kghour",
+  "item_die_code",
+  "default_uom",
+  "default_bom"
+ ],
+ "fields": [
+  {
+   "fieldname": "line_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Line No",
+   "options": "Workstation"
+  },
+  {
+   "fetch_from": "line_no.workstation_type",
+   "fieldname": "workstation_type",
+   "fieldtype": "Link",
+   "label": "Workstation Type",
+   "options": "Workstation Type"
+  },
+  {
+   "fieldname": "time_to_fill_10kg_min",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Time To Fill 10KG /min"
+  },
+  {
+   "fieldname": "production_qty_kghour",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Production Qty KG/Hour"
+  },
+  {
+   "fieldname": "item_die_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item_die_code.stock_uom",
+   "fieldname": "default_uom",
+   "fieldtype": "Link",
+   "label": "Default UOM",
+   "options": "UOM"
+  },
+  {
+   "fetch_from": "item_die_code.default_bom",
+   "fieldname": "default_bom",
+   "fieldtype": "Link",
+   "label": "Default BOM",
+   "options": "BOM"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-20 13:27:19.179636",
+ "modified_by": "Administrator",
+ "module": "Torino",
+ "name": "Item Die Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
