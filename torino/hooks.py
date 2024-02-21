@@ -19,10 +19,42 @@ doc_events = {
 		"before_save": "torino.doctype_triggers.accounting.payment_entry.payment_entry.before_save",
 		"before_cancel": "torino.doctype_triggers.accounting.payment_entry.payment_entry.before_cancel",
 		"on_update": "torino.doctype_triggers.accounting.payment_entry.payment_entry.on_update",
-	}}
+	}
+    ,
+	"Work Order": {
+		"before_insert": "torino.doctype_triggers.manufacturing.work_order.work_order.before_insert",
+		"after_insert": "torino.doctype_triggers.manufacturing.work_order.work_order.after_insert",
+		"onload": "torino.doctype_triggers.manufacturing.work_order.work_order.onload",
+		"before_validate": "torino.doctype_triggers.manufacturing.work_order.work_order.before_validate",
+		"validate": "torino.doctype_triggers.manufacturing.work_order.work_order.validate",
+		"on_submit": "torino.doctype_triggers.manufacturing.work_order.work_order.on_submit",
+		"on_cancel": "torino.doctype_triggers.manufacturing.work_order.work_order.on_cancel",
+		"on_update_after_submit": "torino.doctype_triggers.manufacturing.work_order.work_order.on_update_after_submit",
+		"before_save": "torino.doctype_triggers.manufacturing.work_order.work_order.before_save",
+		"before_cancel": "torino.doctype_triggers.manufacturing.work_order.work_order.before_cancel",
+		"on_update": "torino.doctype_triggers.manufacturing.work_order.work_order.on_update",
+	},
+    "Production Plan": {
+		"before_insert": "torino.doctype_triggers.manufacturing.production_plan.production_plan.before_insert",
+		"after_insert": "torino.doctype_triggers.manufacturing.production_plan.production_plan.after_insert",
+		"onload": "torino.doctype_triggers.manufacturing.production_plan.production_plan.onload",
+		"before_validate": "torino.doctype_triggers.manufacturing.production_plan.production_plan.before_validate",
+		"validate": "torino.doctype_triggers.manufacturing.production_plan.production_plan.validate",
+		"on_submit": "torino.doctype_triggers.manufacturing.production_plan.production_plan.on_submit",
+		"on_cancel": "torino.doctype_triggers.manufacturing.production_plan.production_plan.on_cancel",
+		"on_update_after_submit": "torino.doctype_triggers.manufacturing.production_plan.production_plan.on_update_after_submit",
+		"before_save": "torino.doctype_triggers.manufacturing.production_plan.production_plan.before_save",
+		"before_cancel": "torino.doctype_triggers.manufacturing.production_plan.production_plan.before_cancel",
+		"on_update": "torino.doctype_triggers.manufacturing.production_plan.production_plan.on_update",
+	}
+    }
 
 doctype_js = {
-	"Payment Entry" : "doctype_triggers/accounting/payment_entry/payment_entry.js"
+	"Payment Entry" : "doctype_triggers/accounting/payment_entry/payment_entry.js",
+    "Work Order" : "doctype_triggers/manufacturing/work_order/work_order.js",
+    "Production Plan" : "doctype_triggers/manufacturing/production_plan/production_plan.js"
+
+
 }
 # required_apps = []
 
@@ -135,7 +167,8 @@ doctype_js = {
 # Override standard doctype classes
 
 override_doctype_class = {
-	"Payroll Entry": "torino.overrides.payroll_entry.payroll_entry.CustomPayrollEntry"
+	"Payroll Entry": "torino.overrides.payroll_entry.payroll_entry.CustomPayrollEntry",
+    "Production Plan": "torino.overrides.production_plan.production_plan.CustomProductionPlan"
 }
 
 # Document Events
