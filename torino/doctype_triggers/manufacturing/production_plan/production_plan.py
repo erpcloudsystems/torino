@@ -22,11 +22,11 @@ def before_validate(doc, method=None):
 
 @frappe.whitelist()
 def validate(doc, method=None):
-    for row in doc.po_items:
-        production_qty_kghour = (row.planned_qty)/(frappe.get_value("Item Die Table",{"parent":row.item_code,"line_no":row.custom_wip_warehouse},["production_qty_kghour"]))
-        # frappe.msgprint(str(production_qty_kghour))
-        row.custom_time_to_finish_per_line=production_qty_kghour
-
+            # for row in doc.po_items:
+            #     production_qty_kghour = (row.planned_qty)/(frappe.get_value("Item Die Table",{"parent":row.item_code,"line_no":row.custom_wip_warehouse},["production_qty_kghour"]))
+            #     # frappe.msgprint(str(production_qty_kghour))
+            #     row.custom_time_to_finish_per_line=production_qty_kghour
+    pass
 @frappe.whitelist()
 def on_submit(doc, method=None):
     pass
