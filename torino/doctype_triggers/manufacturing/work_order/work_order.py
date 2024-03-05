@@ -48,3 +48,9 @@ def before_cancel(doc, method=None):
 @frappe.whitelist()
 def on_update(doc, method=None):
     pass
+@frappe.whitelist()
+def get_time(production_item):
+    time_in_mins = (frappe.get_value("Work Order Operation",{"parent":production_item}),["time_to_fill_10kg_min"])/10
+    # # frappe.msgprint(str(production_qty_kghour))
+    # row.custom_time_to_finish_per_line=production_qty_kghour
+    return time_in_mins
