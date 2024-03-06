@@ -169,7 +169,7 @@ doctype_js = {
 override_doctype_class = {
 	"Payroll Entry": "torino.overrides.payroll_entry.payroll_entry.CustomPayrollEntry",
     "Production Plan": "torino.overrides.production_plan.production_plan.CustomProductionPlan",
-    "Work Order": "torino.overrides.work_order.work_order.CustomWorkOrder"
+    # "Work Order": "torino.overrides.work_order.work_order.CustomWorkOrder"
 }
 
 # Document Events
