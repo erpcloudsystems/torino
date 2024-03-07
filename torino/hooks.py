@@ -214,7 +214,7 @@ override_doctype_class = {
 # ------------------------------
 #
 # override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "torino.event.get_events"
+# 	"erpnext.manufacturing.doctype.work_order.work_order.set_work_order_ops": "torino.overrides.work_order.work_order.set_work_order_ops"
 # }
 #
 # each overriding function accepts a `data` argument;

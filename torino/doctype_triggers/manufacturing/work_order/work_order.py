@@ -26,10 +26,39 @@ def onload(doc, method=None):
 def before_validate(doc, method=None):
     pass
 
+import frappe
+
 @frappe.whitelist()
 def validate(doc, method=None):
-    pass
+    for row in doc.operations:
+        if row.workstation:
+            time_to_fill = frappe.get_value("Item Die Table",
+                                             {"parent": doc.production_item, "line_no": row.workstation},
+                                             "time_to_fill_10kg_min")
+            if time_to_fill is not None:
+                time_in_mins = int(time_to_fill) / 10
+                row.time_in_mins = time_in_mins
+            else:
+                for i in doc.operations:
+                    fixed_time = frappe.db.get_value("BOM Operation",
+                                                     {"parent": doc.bom_no, "Operation": i.operation},
+                                                     "fixed_time")
 
+                    if frappe.db.get_value("BOM Operation",
+                                           {"parent": doc.bom_no, "operation": i.operation},
+                                           "time_in_mins"):
+                        time=frappe.db.get_value("BOM Operation",
+                                                        {"parent": doc.bom_no, "operation": i.operation},
+                                                        ["time_in_mins"])
+                        qty=frappe.db.get_value("BOM",{"name": doc.bom_no},
+                                                        ["quantity"])
+                        if fixed_time:
+                            i.time_in_mins = time
+                        else:
+                            i.time_in_mins = time * qty
+                    
+
+                    
 @frappe.whitelist()
 def on_submit(doc, method=None):
     pass
