@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-24 11:53:19.622012",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date_svxa",
+  "item1",
+  "item_name1",
+  "qty1",
+  "bom1",
+  "uom1",
+  "work_order1",
+  "column_break_trfv",
+  "create_work_order",
+  "item2",
+  "item_name2",
+  "qty2",
+  "bom2",
+  "uom2",
+  "work_order2"
+ ],
+ "fields": [
+  {
+   "fieldname": "date_svxa",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "item1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Item1",
+   "options": "Item"
+  },
+  {
+   "fieldname": "qty1",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "QTY1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item2",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Item2",
+   "options": "Item"
+  },
+  {
+   "fieldname": "qty2",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "QTY2",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "create_work_order",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Create Work Order"
+  },
+  {
+   "fetch_from": "item1.default_bom",
+   "fieldname": "bom1",
+   "fieldtype": "Link",
+   "label": "BOM1",
+   "options": "BOM"
+  },
+  {
+   "fetch_from": "item2.default_bom",
+   "fieldname": "bom2",
+   "fieldtype": "Link",
+   "label": "BOM2",
+   "options": "BOM"
+  },
+  {
+   "fetch_from": "item1.item_name",
+   "fieldname": "item_name1",
+   "fieldtype": "Data",
+   "label": "Item Name1"
+  },
+  {
+   "fetch_from": "item1.stock_uom",
+   "fieldname": "uom1",
+   "fieldtype": "Link",
+   "label": "UOM1",
+   "options": "UOM"
+  },
+  {
+   "fetch_from": "item2.item_name",
+   "fieldname": "item_name2",
+   "fieldtype": "Data",
+   "label": "Item Name2"
+  },
+  {
+   "fetch_from": "item2.stock_uom",
+   "fieldname": "uom2",
+   "fieldtype": "Link",
+   "label": "UOM2",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "work_order1",
+   "fieldtype": "Link",
+   "label": "Work Order1",
+   "options": "Work Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "work_order2",
+   "fieldtype": "Link",
+   "label": "Work Order2",
+   "options": "Work Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_trfv",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-25 15:31:33.222619",
+ "modified_by": "Administrator",
+ "module": "Torino",
+ "name": "Mixing Remaining",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
